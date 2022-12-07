@@ -13,7 +13,7 @@ function Weather() {
   return (
     <div className="weather-condition">
       {
-      weather.list.map((data, index) => {
+      weather.list && weather.list.map((data, index) => {
         if (index % 8 === 0 || index === 39) {
           return (
             <div key={index}>
