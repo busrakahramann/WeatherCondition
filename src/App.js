@@ -8,8 +8,10 @@ function App() {
   return (
     <CityProvider>
       <WeatherProvider>
-        <Header/>
-        <Weather/>
+        <div className='app'>
+          <Header/>
+          <Weather/>
+        </div>
       </WeatherProvider>
     </CityProvider>
   );
