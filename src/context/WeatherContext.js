@@ -14,11 +14,11 @@ export const WeatherProvider = ({ children }) => {
     const getWeatherDataCity = async (city) => {
       try {
         const { data } = await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=ead722bcd000f6ad721d4e932c37da1e`
+          `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${api}`
         );
         setWeather(data);
       } catch {
-        alert("Veri Alınırken Bir hata oluştu.");
+        alert("Bir hata oluştu.");
       }
     };
     city && getWeatherDataCity(city);

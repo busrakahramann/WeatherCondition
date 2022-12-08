@@ -4,14 +4,7 @@ import { useWeather } from "../context/WeatherContext";
 function Weather() {
   const { weather } = useWeather();
   const { city } = useCity();
-  console.log(weather.list);
-  if (!weather) {
-    return (
-      <div>
-        <p>Yükleniyor...</p>
-      </div>
-    );
-  }
+  
   return (
     <>
     {weather.list &&
